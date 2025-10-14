@@ -1,0 +1,50 @@
+Crear o clonar repositorio
+-----------------------------------------------------------------------------
+git init                 # Inicia un nuevo repositorio en la carpeta actual
+git clone URL            # Clona un repositorio remoto (GitHub, GitLab, etc.)
+
+
+Estado y seguimiento
+-------------------------------------------------------------------
+
+git status               # Muestra el estado actual del repo
+git add  archivo.xxx	 # Agrega un archivo al área de staging
+git add .                # Agrega todos los cambios
+git reset archivo.xxx    # Saca un archivo del área de staging
+
+
+Confirmar cambios (commits)
+-----------------------------------------------------------------------
+
+git commit -m "Mensaje del commit"    # Crea un commit con mensaje
+git commit -am "Mensaje"              # Agrega y commitea todos los archivos modificados
+
+Ver historial
+------------------------------------------------------------------------------
+git log                 # Muestra historial completo de commits
+git log --oneline       # Historial en una línea por commit
+git diff                # Muestra los cambios no confirmados
+
+Ramas (branches)
+--------------------------------------------------------------------------------
+git branch              # Lista ramas
+git branch nombre_rama  # Crea nueva rama
+git checkout nombre_rama  # Cambia a otra rama
+git checkout -b nombre_rama  # Crea y cambia a una nueva rama
+git merge nombre_rama   # Fusiona una rama en la actual
+git branch -d nombre_rama  # Borra una rama
+
+Sincronizar con repositorio remoto
+-----------------------------------------------------------------------------------
+git remote -v            # Ver remotos configurados
+git remote add origin URL # Conectar repo local a remoto
+git push -u origin main   # Subir la rama main por primera vez
+git push                 # Subir cambios al remoto
+git pull                 # Traer y fusionar cambios del remoto
+git fetch                # Descarga cambios sin fusionar
+
+
+Otros útiles
+-------------------------------------------------------------------------------------
+git stash                  # Guarda cambios temporales
+git stash pop              # Recupera cambios guardados
